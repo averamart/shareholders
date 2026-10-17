@@ -52,7 +52,7 @@ const A={pw:async()=>{const p=prompt('নতুন পাসওয়ার্�
   const c=chk(await check());alert(JSON.stringify(c)===JSON.stringify(d.check)?'রিস্টোর সফল, হিসাব মিলেছে ✔':'সতর্কতা: হিসাব মেলেনি!\n'+st2(c));staff()}};
 document.addEventListener('click',async ev=>{const a=ev.target.closest('[data-a]');if(a){ev.preventDefault();try{await A[a.dataset.a](a)}catch(x){alert(x.message)}}});
 document.addEventListener('submit',async ev=>{ev.preventDefault();const f=ev.target,k=f.dataset.f,d=Object.fromEntries(new FormData(f));
- try{if(k==='login'){const r=await sb.auth.signInWithPassword({email:em(d.username),password:d.password});if(r.error)throw Error('আইডি বা পাসওয়ার্ড ভুল');boot()}
+ try{if(k==='login'){const r=await sb.auth.signInWithPassword({email:em(d.username),password:d.password});if(r.error){const m=r.error.message;throw Error(/invalid login/i.test(m)?'আইডি বা পাসওয়ার্ড ভুল':'ত্রুটি: '+m)};boot()}
  else if(k==='doc'){const x=d.f,p=`${cur}/${Date.now()}.${x.name.split('.').pop().toLowerCase()}`;if(x.size>5e6)throw Error('৫MB-এর বেশি নয়');const u=await sb.storage.from('forms').upload(p,x);if(u.error)throw Error(u.error.message);ck(await sb.from('docs').insert({member_id:cur,path:p,name:x.name}));stm(cur,1)}
  else if(k==='user'){const tmp=supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:false}}),r=await tmp.auth.signUp({email:em(d.login),password:d.password});if(r.error)throw Error(r.error.message);
   ck(await sb.from('members').insert({login:d.login.trim().toLowerCase(),name:d.name,phone:d.phone,role:d.role||'shareholder'}));f.reset();staff()}
