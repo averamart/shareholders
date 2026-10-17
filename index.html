@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>এভেরা মার্ট – শেয়ারহোল্ডার পোর্টাল</title>
+<style>
+:root{--b:#1f5fae;--g:#2bb07f;--bg:#f3f7fa;--t:#17324d}
+*{box-sizing:border-box}body{margin:0;font-family:'Noto Sans Bengali','Kalpurush',system-ui,sans-serif;background:var(--bg);color:var(--t)}
+header{background:#fff;border-bottom:3px solid var(--g);display:flex;align-items:center;gap:10px;padding:8px 14px}header img{height:48px}header b{flex:1}
+main{max-width:980px;margin:auto;padding:12px}.c{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 4px #0001}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.k{background:linear-gradient(135deg,var(--b),var(--g));color:#fff;border-radius:12px;padding:12px}.k small{opacity:.85}.k div{font-size:1.25em;font-weight:700}
+input,select,button{font:inherit;padding:9px;border:1px solid #bcd;border-radius:8px;margin:3px 0;max-width:100%}button{background:var(--b);color:#fff;border:0;cursor:pointer}button.s{background:#7a8b99;padding:4px 8px}button.r{background:#c0392b;padding:4px 8px}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}nav button{background:#fff;color:var(--b);border:1px solid var(--b)}nav button.on{background:var(--b);color:#fff}
+.w{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92em}td,th{border-bottom:1px solid #e3ebf1;padding:6px;text-align:left;white-space:nowrap}th{background:#eef4f9}.v{text-decoration:line-through;opacity:.45}
+.f{display:flex;gap:8px;flex-wrap:wrap;align-items:end}.err{color:#c0392b}h3{margin:4px 0 8px}
+@media print{header button,nav,.np{display:none}}
+</style></head><body>
+<header><img src="logo.jpg" alt=""><b>এভেরা মার্ট – শেয়ারহোল্ডার পোর্টাল</b><span id="who"></span> <button id="pw" class="np" data-a="pw" hidden>পাসওয়ার্ড বদল</button> <button id="out" class="np" data-a="out" hidden>লগআউট</button></header>
+<main id="m"></main>
+<footer style="text-align:center;font-size:.85em;color:#6b7f90;padding:14px" class="np"><details style="display:inline-block;text-align:left"><summary>সংস্করণ ২.০.২ · ১৩ অক্টোবর ২০২৬</summary>
+<b>২.০.২</b><ul style="margin:4px 0;padding-left:18px"><li>সদস্য নিজে পাসওয়ার্ড বদলাতে পারে</li><li>সবার লগইন একসাথে তৈরির বোতাম</li><li>ব্যাকআপের তারিখ ডাটাবেসে থাকে (যেকোনো ডিভাইসে একই সতর্কবার্তা)</li></ul>
+<b>২.০.১</b><ul style="margin:4px 0;padding-left:18px"><li>৭ দিন ব্যাকআপ না নিলে অ্যাডমিনকে সতর্কবার্তা</li><li>অডিট লগে পুরো বিবরণ</li></ul>
+<b>২.০.০</b><ul style="margin:4px 0;padding-left:18px"><li>Supabase ডাটাবেস (গিটহাব পেজেসে চলে)</li><li>প্রতিটি তালিকার PDF ডাউনলোড</li><li>ব্যাকআপ (JSON) ও রিস্টোর, যাচাইয়ের জন্য PDF ব্যাকআপ</li></ul>
+<b>১.০.০</b> – প্রথম সংস্করণ: লগইন, সঞ্চয়, উত্তোলন, লাভ বণ্টন, ফর্ম আপলোড, অডিট লগ</details></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script></body></html>
