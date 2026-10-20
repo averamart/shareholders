@@ -1,6 +1,6 @@
 const SB_URL='https://mcytvvvypigjnbowiwdz.supabase.co',SB_KEY='sb_publishable_qlX_xdkj_FjogqvL5oe-_w_xGiOe1EG'; // ← Supabase Settings → API থেকে বসান
 const sb=supabase.createClient(SB_URL,SB_KEY),$=s=>document.querySelector(s),M=$('#m'),e=s=>String(s??'').replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';'),
-t=n=>'৳ '+Number(n||0).toLocaleString('bn-BD',{maximumFractionDigits:2}),em=id=>id.trim().toLowerCase()+'@avera.portal',
+t=n=>'৳\u00a0'+Number(n||0).toLocaleString('bn-BD',{maximumFractionDigits:2}),em=id=>id.trim().toLowerCase()+'@avera.portal',
 T={monthly:'মাসিক সঞ্চয়',special:'বিশেষ/এককালীন সঞ্চয়',wcap:'মূলধন উত্তোলন',wprofit:'লভ্যাংশ উত্তোলন'},today=()=>new Date().toISOString().slice(0,10),
 TB=[['members','id'],['banks','id'],['tx','id'],['profits','month'],['shares','month'],['docs','id'],['files','id'],['notices','id'],['perms','k'],['reads','notice_id']];
 let me,tab='db',cur=null,P={},LG={m:'',u:'',t:'',md:'',v:0};

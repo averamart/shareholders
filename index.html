@@ -10,12 +10,13 @@ nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}nav button{background
 .w{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92em}td,th{border-bottom:1px solid #e3ebf1;padding:6px;text-align:left;white-space:nowrap}th{background:#eef4f9}.v{text-decoration:line-through;opacity:.45}
 .f{display:flex;gap:8px;flex-wrap:wrap;align-items:end}.err{color:#c0392b}h3{margin:4px 0 8px}
 @media print{header button,nav,.np{display:none}}
-@media(max-width:640px){main{padding:8px}.c{padding:10px}header{flex-wrap:wrap}header img{height:38px}header b{flex:1 1 100%;font-size:.95em}.f>*{flex:1 1 100%}input,select,button{font-size:16px;padding:11px}.g{grid-template-columns:1fr 1fr}.k div{font-size:1.05em}nav{overflow-x:auto;flex-wrap:nowrap}nav button{white-space:nowrap}td,th{padding:5px 4px;font-size:.88em}}
+@media(max-width:640px){main{padding:8px}.c{padding:10px}header{flex-wrap:wrap;gap:6px 10px}header img{height:40px}header b{flex:1 1 calc(100% - 60px);font-size:.95em;min-width:0}#who{margin-left:auto;font-size:.95em}#mm{max-width:calc(100vw - 20px)}.f>*{flex:1 1 100%}input,select,button{font-size:16px;padding:11px}.g{grid-template-columns:1fr 1fr}.k div{font-size:1.05em}nav{overflow-x:auto;flex-wrap:nowrap}nav button{white-space:nowrap}td,th{padding:5px 4px;font-size:.88em;white-space:normal;vertical-align:top}}
 #mm button{display:block;width:100%;text-align:left;background:#fff;color:var(--t);border:0;margin:0;border-radius:6px}#mm button:hover{background:#eef4f9}
 </style></head><body>
 <header><img src="logo.jpg" alt=""><b>এভেরা মার্ট – শেয়ারহোল্ডার পোর্টাল</b><span id="who"></span> <button id="bell" class="np" data-a="nt" hidden>🔔 <span id="bc"></span></button> <div id="mn" class="np" hidden style="position:relative"><button data-a="mn" aria-label="মেনু" style="font-size:20px;line-height:1;padding:6px 12px;background:#eef4f9;color:var(--t)">⋮</button><div id="mm" hidden style="position:absolute;right:0;top:44px;z-index:20;min-width:170px;padding:6px;background:#fff;border:1px solid #cde;border-radius:10px;box-shadow:0 4px 14px #0003"><button data-a="pw">পাসওয়ার্ড বদল</button><button data-a="out">লগআউট</button></div></div></header>
 <main id="m"></main>
-<footer id="ver" hidden style="text-align:center;font-size:.85em;color:#6b7f90;padding:14px" class="np"><details style="display:inline-block;text-align:left"><summary>সংস্করণ ২.৫.২ · ১৯ অক্টোবর ২০২৬</summary>
+<footer id="ver" hidden style="text-align:center;font-size:.85em;color:#6b7f90;padding:14px" class="np"><details style="display:inline-block;text-align:left"><summary>সংস্করণ ২.৫.৩ · ১৯ অক্টোবর ২০২৬</summary>
+<b>২.৫.৩</b><ul style="margin:4px 0;padding-left:18px"><li>মোবাইলে ⋮ মেনু ও হেডার ঠিক জায়গায়, তালিকার লেখা কাটা পড়ে না</li></ul>
 <b>২.৫.২</b><ul style="margin:4px 0;padding-left:18px"><li>পাসওয়ার্ড বদল ও লগআউট ডানের ⋮ মেনুতে</li></ul>
 <b>২.৫.১</b><ul style="margin:4px 0;padding-left:18px"><li>চক্র ক্লোজিংয়ের ডাটাবেস কোড সরল ও সংশোধিত</li></ul>
 <b>২.৫.০</b><ul style="margin:4px 0;padding-left:18px"><li>হিসাব-চক্র: প্রতি মাসের ১৬ তারিখ থেকে পরের মাসের ১৫ তারিখ, নাম শুরুর মাস অনুযায়ী</li><li>১৫ তারিখে ক্লোজিং, ক্লোজ হওয়া চক্রে এন্ট্রি বন্ধ (তালা), শুধু অ্যাডমিন চক্র খুলতে পারেন</li><li>খাতা, লভ্যাংশ তালিকা চক্র অনুযায়ী</li></ul>
@@ -31,4 +32,4 @@ nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}nav button{background
 <b>২.০.০</b><ul style="margin:4px 0;padding-left:18px"><li>Supabase ডাটাবেস (গিটহাব পেজেসে চলে)</li><li>প্রতিটি তালিকার PDF ডাউনলোড</li><li>ব্যাকআপ (JSON) ও রিস্টোর, যাচাইয়ের জন্য PDF ব্যাকআপ</li></ul>
 <b>১.০.০</b> – প্রথম সংস্করণ: লগইন, সঞ্চয়, উত্তোলন, লাভ বণ্টন, ফর্ম আপলোড, অডিট লগ</details></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
-<script src="app.js?v=252"></script></body></html>
+<script src="app.js?v=253"></script></body></html>
